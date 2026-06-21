@@ -160,6 +160,23 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .rest-skip{background:var(--s2);border:1.5px solid var(--br);color:var(--tx);padding:13px 32px;border-radius:13px;font-size:14px;font-weight:700;cursor:pointer}
 .rest-skip:active{opacity:.7}
 
+/* ═══════════════════════════════════════
+   MEDITATION SCREEN
+═══════════════════════════════════════ */
+.med-wrap{display:flex;flex-direction:column;align-items:center;padding:28px 24px 24px;gap:22px;text-align:center;flex:1}
+.med-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--tx2)}
+.med-circle-outer{position:relative;width:180px;height:180px;display:flex;align-items:center;justify-content:center}
+.med-ring{position:absolute;inset:0}
+.med-blob{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,#6366F166 0%,#6366F133 60%,transparent 100%);border:2.5px solid #6366F188;transition:transform .9s ease-in-out, opacity .9s ease-in-out}
+.med-phase-lbl{font-size:18px;font-weight:800;margin-top:-2px;transition:opacity .3s}
+.med-phase-count{font-size:38px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--acc);line-height:1}
+.med-total-time{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--tx2);background:var(--s2);padding:7px 18px;border-radius:20px}
+.med-nota{font-size:12px;color:var(--tx2);line-height:1.7;max-width:280px;background:var(--s1);border-radius:10px;padding:11px 14px;border-left:3px solid var(--acc)}
+.med-btns{display:flex;gap:12px;width:100%;max-width:300px}
+.med-pause{flex:1;background:var(--s2);border:1.5px solid var(--br);color:var(--tx);padding:13px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer}
+.med-done{flex:1;background:color-mix(in srgb,var(--ok) 15%,var(--s1));border:1.5px solid var(--ok);color:var(--ok);padding:13px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer}
+.med-pause:active,.med-done:active{opacity:.7}
+
 /* ── RESPONSIVE ── */
 @media(min-width:520px){
   .hdr,.tip,.day-tabs,.detail,.chart-wrap,.info-wrap,
@@ -352,8 +369,8 @@ lunes:{nombre:'Lunes',emoji:'💪',grupo:'Pecho + Hombros + Core',color:'#4F46E5
     {id:'l1',n:'Calentamiento: rotaciones brazos, hombros, cuello',s:'',r:'5 min',nota:'Sin peso',mat:'',restSec:0},
     {id:'l2',n:'Press de pecho con mancuernas',s:'4',r:'× 12',nota:'Brazos a 45°, baja controlado, sube apretando pecho',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'l3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Brazos ligeramente flexionados, siente el estiramiento en pecho',mat:'10kg',restSec:60},
-    {id:'l3b',n:'Flexiones (push-ups)',s:'3',r:'× 12',nota:'Baja 3 seg, empuja rápido. Inclinado en sofá si no puedes apoyar el pie afectado',mat:'peso',restSec:60},
-    {id:'l4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Espalda recta, no bloquees codos al subir',mat:'10kg',restSec:90},
+    {id:'l3b',n:'Flexiones (push-ups)',s:'3',r:'× 12',nota:'Baja 3 seg, empuja rápido. Inclinado en sofá si no puedes apoyar el pie afectado',mat:'peso',restSec:60,video:'IODxDxX7oi4'},
+    {id:'l4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Espalda recta, no bloquees codos al subir',mat:'10kg',restSec:90,video:'fuQpuu--bMI'},
     {id:'l5',n:'Elevaciones laterales sentado',s:'3',r:'× 15',nota:'Hasta altura de hombros, codos ligeramente flexionados',mat:'4kg',restSec:60},
     {id:'l6',n:'Plancha sobre antebrazos y rodillas',s:'3',r:'× 40 seg',nota:'Core apretado, respira normalmente',mat:'peso',restSec:45},
     {id:'l7',n:'Crunch abdominal',s:'3',r:'× 18',nota:'Manos cruzadas en pecho, sube solo los hombros',mat:'peso',restSec:45},
@@ -369,7 +386,7 @@ martes:{nombre:'Martes',emoji:'🏋️',grupo:'Espalda + Bíceps + Cardio',color
     {id:'m2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Espalda paralela, tira codo hacia arriba, aprieta omóplato',mat:'10kg',restSec:90,video:'radVWm-e81I'},
     {id:'m3',n:'Remo con mancuernas a dos manos (inclinado)',s:'3',r:'× 12',nota:'Pecho apoyado en muslos, tira ambas juntas',mat:'10kg',restSec:90},
     {id:'m4',n:'Pullover con mancuerna',s:'3',r:'× 12',nota:'Brazos extendidos, baja detrás cabeza, siente el dorsal',mat:'10kg',restSec:60},
-    {id:'m5',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación al subir',mat:'10kg',restSec:60},
+    {id:'m5',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación al subir',mat:'10kg',restSec:60,video:'AoxKWKVFfXk'},
     {id:'m6',n:'Curl martillo sentado',s:'3',r:'× 12',nota:'Agarre neutro, trabaja braquial y antebrazo',mat:'4kg',restSec:60},
     {id:'m7',n:'Cardio boxeo sentado (jab-cross)',s:'4',r:'× 2 min',nota:'Rápido y controlado, descansa 1 min entre rondas',mat:'peso',restSec:30},
     {id:'m8',n:'Plancha sobre antebrazos y rodillas',s:'2',r:'× 30 seg',nota:'Core de cierre',mat:'peso',restSec:45},
@@ -381,12 +398,12 @@ martes:{nombre:'Martes',emoji:'🏋️',grupo:'Espalda + Bíceps + Cardio',color
 miercoles:{nombre:'Miércoles',emoji:'💪',grupo:'Bíceps + Tríceps + Core',color:'#0891B2',kcal:1800,dur:'40 min',
   ejercicios:[
     {id:'x1',n:'Calentamiento: rotaciones codos, muñecas y hombros',s:'',r:'5 min',nota:'Movilidad articular antes de trabajar brazos',mat:'',restSec:0},
-    {id:'x2',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación completa al subir',mat:'10kg',restSec:60},
+    {id:'x2',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación completa al subir',mat:'10kg',restSec:60,video:'AoxKWKVFfXk'},
     {id:'x3',n:'Curl martillo sentado',s:'3',r:'× 12',nota:'Agarre neutro, trabaja braquial y antebrazo',mat:'4kg',restSec:60},
-    {id:'x4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a lados de la cabeza, codos fijos apuntando al techo',mat:'4kg',restSec:60},
+    {id:'x4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a lados de la cabeza, codos fijos apuntando al techo',mat:'4kg',restSec:60,video:'tj81tVq3wLo'},
     {id:'x5',n:'Extensión tríceps a una mano (sentado)',s:'3',r:'× 12/brazo',nota:'Codo apuntando al techo, extiende completamente',mat:'4kg',restSec:60},
     {id:'x6',n:'Fondos en silla (tríceps)',s:'3',r:'× 12',nota:'Manos en borde silla, baja cadera, empuja con tríceps',mat:'peso',restSec:60},
-    {id:'x7',n:'Flexiones (push-ups)',s:'3',r:'× 10',nota:'Inclinado en sofá si no puedes apoyar el pie. Baja 3 seg controlado, empuja fuerte',mat:'peso',restSec:60},
+    {id:'x7',n:'Flexiones (push-ups)',s:'3',r:'× 10',nota:'Inclinado en sofá si no puedes apoyar el pie. Baja 3 seg controlado, empuja fuerte',mat:'peso',restSec:60,video:'IODxDxX7oi4'},
     {id:'x8',n:'Plancha sobre antebrazos y rodillas',s:'3',r:'× 40 seg',nota:'Core apretado, respira normalmente',mat:'peso',restSec:45},
     {id:'x9',n:'Vacío abdominal',s:'3',r:'× 20 seg',nota:'Exhala, mete ombligo hacia la columna, mantén',mat:'peso',restSec:0},
     {id:'x10',n:'Meditación: respiración consciente',s:'',r:'5-10 min',nota:'Inhala 4 seg · aguanta 4 · exhala 6. Repite 10 veces con ojos cerrados. Observa sensaciones sin juzgar',mat:'',restSec:0},
@@ -399,7 +416,7 @@ jueves:{nombre:'Jueves',emoji:'🎯',grupo:'Hombros + Manguito Rotador + Core',c
     {id:'j1',n:'Calentamiento: movilidad hombros, rotaciones',s:'',r:'5 min',nota:'',mat:'',restSec:0},
     {id:'j2',n:'Puente de glúteos (acostado)',s:'4',r:'× 15',nota:'⚠️ Solo si autorizado por fisio. Sin apoyar talón afectado',mat:'peso',restSec:45,warn:true},
     {id:'j3',n:'Elevación de pierna recta (acostado)',s:'3',r:'× 12/lado',nota:'⚠️ Eleva 30 cm, baja controlado sin tocar suelo',mat:'peso',restSec:45,warn:true},
-    {id:'j4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Más pesado que el lunes',mat:'10kg',restSec:90},
+    {id:'j4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Más pesado que el lunes',mat:'10kg',restSec:90,video:'fuQpuu--bMI'},
     {id:'j5',n:'Elevaciones frontales alternas sentado',s:'3',r:'× 12',nota:'Hasta altura de hombros',mat:'4kg',restSec:60},
     {id:'j6',n:'Rear delt flyes (pájaro inclinado sentado)',s:'3',r:'× 15',nota:'Pecho en muslos, codos ligeramente flexionados',mat:'4kg',restSec:60},
     {id:'j7',n:'Rotación externa manguito rotador',s:'3',r:'× 15/lado',nota:'Tumbado lateral, mancuerna ligera, codo a 90°, gira antebrazo hacia arriba',mat:'4kg',restSec:45},
@@ -414,10 +431,10 @@ jueves:{nombre:'Jueves',emoji:'🎯',grupo:'Hombros + Manguito Rotador + Core',c
 viernes:{nombre:'Viernes',emoji:'🔥',grupo:'Tríceps + Pecho + HIIT',color:'#DC2626',kcal:1800,dur:'40 min',
   ejercicios:[
     {id:'v1',n:'Calentamiento: movilidad codos, muñecas, hombros',s:'',r:'5 min',nota:'',mat:'',restSec:0},
-    {id:'v1b',n:'Flexiones (push-ups)',s:'4',r:'× 12',nota:'Activación de pecho distinta al press — activa más serrato. Inclinado en sofá si necesitas. Empuja explosivo',mat:'peso',restSec:60},
+    {id:'v1b',n:'Flexiones (push-ups)',s:'4',r:'× 12',nota:'Activación de pecho distinta al press — activa más serrato. Inclinado en sofá si necesitas. Empuja explosivo',mat:'peso',restSec:60,video:'IODxDxX7oi4'},
     {id:'v2',n:'Press de pecho con mancuernas',s:'4',r:'× 10',nota:'Más pesado que el lunes, última serie al fallo',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'v3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Control total, siente el pecho trabajar',mat:'10kg',restSec:60},
-    {id:'v4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a los lados de la cabeza, codos fijos',mat:'4kg',restSec:60},
+    {id:'v4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a los lados de la cabeza, codos fijos',mat:'4kg',restSec:60,video:'tj81tVq3wLo'},
     {id:'v5',n:'Extensión tríceps a una mano (sentado)',s:'3',r:'× 12/brazo',nota:'Codo apuntando al techo, extiende el brazo',mat:'4kg',restSec:60},
     {id:'v6',n:'Fondos en silla (tríceps)',s:'3',r:'× 12',nota:'Manos en borde silla, baja cadera, empuja con tríceps',mat:'peso',restSec:60},
     {id:'v7',n:'HIIT: Press hombros + punching rápido',s:'4',r:'30s + 30s',nota:'30 seg press, 30 seg punching sin parar',mat:'4kg',restSec:30},
@@ -434,7 +451,7 @@ sabado:{nombre:'Sábado',emoji:'⚡',grupo:'Espalda + Bíceps + Core',color:'#08
     {id:'s2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Aprieta omóplato al subir',mat:'10kg',restSec:90,video:'radVWm-e81I'},
     {id:'s3',n:'Remo con mancuernas a dos manos',s:'3',r:'× 12',nota:'Controla el peso, no uses impulso',mat:'10kg',restSec:90},
     {id:'s4',n:'Pullover con mancuerna',s:'3',r:'× 12',nota:'Siente el dorsal trabajar',mat:'10kg',restSec:60},
-    {id:'s5',n:'Curl de bíceps alterno',s:'4',r:'× 10',nota:'Más pesado que el martes, última serie al fallo',mat:'10kg',restSec:60},
+    {id:'s5',n:'Curl de bíceps alterno',s:'4',r:'× 10',nota:'Más pesado que el martes, última serie al fallo',mat:'10kg',restSec:60,video:'AoxKWKVFfXk'},
     {id:'s6',n:'Curl martillo',s:'3',r:'× 12',nota:'Agarre neutro, sube controlado',mat:'4kg',restSec:60},
     {id:'s7',n:'Elevación de piernas acostado',s:'3',r:'× 15',nota:'⚠️ Piernas juntas, baja controlado sin tocar suelo',mat:'peso',restSec:45,warn:true},
     {id:'s8',n:'Plancha lateral sobre rodillas',s:'3',r:'× 30 seg/lado',nota:'Oblicuos trabajando, cadera arriba',mat:'peso',restSec:45},
@@ -815,9 +832,11 @@ function toast(msg){
 // ═══════════════════════════════════════════════════════
 // SESSION ENGINE
 // ═══════════════════════════════════════════════════════
-let sessTimer=null, restTimer=null, audioCtx=null;
+let sessTimer=null, restTimer=null, medTimer=null, audioCtx=null;
 let sessDs=null, sessDi=null;
 let _restTotal=0, _restRem=0, _restOnEnd=null, _restNext='';
+let _medTotal=0, _medRem=0, _medRunning=false, _medPhaseIdx=0, _medPhaseRem=0;
+const BREATH=[{n:'Inhala',s:4},{n:'Aguanta',s:4},{n:'Exhala',s:6}];
 
 function ensureAudio(){
   try{
@@ -869,6 +888,7 @@ function startSessTimer(){
 function exitSess(){
   if(sessTimer) clearInterval(sessTimer);
   if(restTimer) clearInterval(restTimer);
+  resetMedit();
   document.getElementById('sess-ov').style.display='none';
   document.getElementById('rest-ov').style.display='none';
   document.body.style.overflow='';
@@ -882,12 +902,143 @@ function matBadge(mat){
   return `<div class="mat-badge" style="color:${m[1]};background:${m[1]}22;border-color:${m[1]}44">${m[0]} ${m[2]}</div>`;
 }
 
+// ── Meditation helpers ──
+function isMedit(ex){ return ex.n.toLowerCase().includes('meditaci'); }
+function parseMeditSecs(r){ const m=r.match(/(\d+)/); return m?parseInt(m[1])*60:300; }
+
+function startMedit(totalSec){
+  if(medTimer) clearInterval(medTimer);
+  _medTotal=totalSec; _medRem=totalSec; _medRunning=true;
+  _medPhaseIdx=0; _medPhaseRem=BREATH[0].s;
+  ensureAudio();
+  updateMeditUI();
+  medTimer=setInterval(tickMedit,1000);
+}
+function stopMedit(){ if(medTimer){clearInterval(medTimer);medTimer=null;} _medRunning=false; }
+function resetMedit(){ stopMedit(); _medTotal=0; _medRem=0; }
+
+function toggleMedit(){
+  if(_medRunning){ stopMedit(); }
+  else { _medRunning=true; medTimer=setInterval(tickMedit,1000); }
+  const btn=document.getElementById('med-pause-btn');
+  if(btn) btn.textContent=_medRunning?'⏸ Pausar':'▶ Reanudar';
+}
+
+function tickMedit(){
+  _medRem--; _medPhaseRem--;
+  if(_medPhaseRem<=0){ _medPhaseIdx=(_medPhaseIdx+1)%BREATH.length; _medPhaseRem=BREATH[_medPhaseIdx].s; }
+  if(_medRem<=0){ resetMedit(); medBell(); setTimeout(completeMedit,1800); return; }
+  updateMeditUI();
+}
+
+function updateMeditUI(){
+  const ph=BREATH[_medPhaseIdx];
+  const min=Math.floor(_medRem/60), sec=_medRem%60;
+  const el=id=>document.getElementById(id);
+  if(el('med-phase-lbl')) el('med-phase-lbl').textContent=ph.n;
+  if(el('med-phase-count')) el('med-phase-count').textContent=_medPhaseRem;
+  if(el('med-total-time')) el('med-total-time').textContent=`${min}:${String(sec).padStart(2,'0')}`;
+  const C=2*Math.PI*76, pct=_medRem/_medTotal;
+  if(el('med-ring-bar')) el('med-ring-bar').style.strokeDashoffset=(C-pct*C).toFixed(1);
+  let scale;
+  if(_medPhaseIdx===0) scale=0.55+0.45*(ph.s-_medPhaseRem)/ph.s;
+  else if(_medPhaseIdx===1) scale=1.0;
+  else scale=1.0-0.45*(ph.s-_medPhaseRem)/ph.s;
+  if(el('med-blob')) el('med-blob').style.transform=`scale(${scale.toFixed(2)})`;
+  if(el('med-pause-btn')) el('med-pause-btn').textContent=_medRunning?'⏸ Pausar':'▶ Reanudar';
+}
+
+function medBell(){
+  ensureAudio(); if(!audioCtx) return;
+  [[528,0.45,3.0],[792,0.18,2.2],[1056,0.1,1.5]].forEach(([f,v,d],i)=>{
+    setTimeout(()=>{
+      const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+      o.connect(g); g.connect(audioCtx.destination);
+      o.frequency.value=f; o.type='sine';
+      g.gain.setValueAtTime(v,audioCtx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+d);
+      o.start(audioCtx.currentTime); o.stop(audioCtx.currentTime+d);
+    },i*160);
+  });
+}
+
+function completeMedit(){
+  resetMedit();
+  const plan=PLAN[DAYS_KEY[sessDi]], sess=getSess(sessDs);
+  const exs=plan.ejercicios, curIdx=sess.exIdx||0, ex=exs[curIdx];
+  const ds=sessDs;
+  if(!state.logs[ds]) state.logs[ds]={completed:[],weight:null};
+  if(!state.logs[ds].completed.includes(ex.id)) state.logs[ds].completed.push(ex.id);
+  saveState();
+  if(curIdx<exs.length-1){ sess.exIdx=curIdx+1; putSess(sessDs,sess); renderSess(); }
+  else sessDone();
+}
+
 function renderSess(){
   const plan=PLAN[DAYS_KEY[sessDi]], sess=getSess(sessDs);
   const exs=plan.ejercicios, exIdx=Math.min(sess.exIdx||0,exs.length-1);
   const ex=exs[exIdx];
   const elapsed=sess.elapsed||0;
   const tStr=`${String(Math.floor(elapsed/60)).padStart(2,'0')}:${String(elapsed%60).padStart(2,'0')}`;
+  const isLast=exIdx===exs.length-1;
+  const dc=plan.color;
+
+  // ── Meditation screen ──
+  if(isMedit(ex)){
+    const C=2*Math.PI*76;
+    const remSec=_medTotal>0?_medRem:parseMeditSecs(ex.r);
+    const pct=_medTotal>0?_medRem/_medTotal:1.0;
+    const off=(C-pct*C).toFixed(1);
+    const min=Math.floor(remSec/60), sec=remSec%60;
+    document.getElementById('sess-ov').innerHTML=`
+      <div style="display:flex;flex-direction:column;min-height:100vh">
+        <div class="sess-hdr" style="background:color-mix(in srgb,${dc} 10%,var(--bg));border-bottom:1px solid ${dc}33">
+          <button class="sess-close" onclick="exitSess()">✕</button>
+          <div style="flex:1;text-align:center">
+            <div style="font-size:11px;font-weight:800;color:${dc};text-transform:uppercase;letter-spacing:.08em">${plan.nombre} ${plan.emoji}</div>
+            <div style="font-size:11px;color:var(--tx2);margin-top:1px">Ejercicio ${exIdx+1} de ${exs.length}</div>
+          </div>
+          <div id="sess-time" style="font-size:17px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--tx2);min-width:56px;text-align:right">${tStr}</div>
+        </div>
+
+        <div class="med-wrap">
+          <div class="med-label">🧘 ${ex.n}</div>
+          <div class="med-circle-outer">
+            <svg class="med-ring" width="180" height="180" viewBox="0 0 180 180" style="transform:rotate(-90deg)">
+              <circle cx="90" cy="90" r="76" fill="none" stroke="var(--s2)" stroke-width="6"/>
+              <circle id="med-ring-bar" cx="90" cy="90" r="76" fill="none" stroke="${dc}" stroke-width="6"
+                stroke-linecap="round"
+                stroke-dasharray="${C.toFixed(1)}"
+                stroke-dashoffset="${off}"
+                style="transition:stroke-dashoffset .95s linear"/>
+            </svg>
+            <div id="med-blob" class="med-blob" style="transform:scale(0.6)"></div>
+            <div style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none">
+              <div id="med-phase-lbl" class="med-phase-lbl">${BREATH[_medPhaseIdx].n}</div>
+              <div id="med-phase-count" class="med-phase-count">${_medPhaseRem||BREATH[0].s}</div>
+            </div>
+          </div>
+          <div id="med-total-time" class="med-total-time">${min}:${String(sec).padStart(2,'0')}</div>
+          ${ex.nota?`<div class="med-nota">${ex.nota.replace(/·/g,' <span style="color:var(--acc);font-weight:900">·</span> ')}</div>`:''}
+          <div class="med-btns">
+            <button id="med-pause-btn" class="med-pause" onclick="toggleMedit()">⏸ Pausar</button>
+            <button class="med-done" onclick="completeMedit()">✓ Hecho</button>
+          </div>
+        </div>
+
+        <div class="sess-nav">
+          <button class="snav-btn" onclick="sessGo(-1)" ${exIdx===0?'disabled':''}>‹ Anterior</button>
+          ${isLast
+            ?`<button class="snav-btn snav-main" onclick="sessDone()" style="background:var(--ok);border-color:var(--ok);color:#fff">Finalizar ✓</button>`
+            :`<button class="snav-btn snav-main" onclick="sessGo(1)" style="border-color:${dc};color:${dc}">Siguiente ›</button>`
+          }
+        </div>
+      </div>
+    `;
+    if(_medTotal===0) startMedit(parseMeditSecs(ex.r));
+    return;
+  }
+
   const n=ex.s?parseInt(ex.s):0;
   const exSets=sess.sets[ex.id]||new Array(n).fill(false);
   const doneN=exSets.filter(Boolean).length;
@@ -904,9 +1055,6 @@ function renderSess(){
   } else {
     setsHTML=`<div class="timed-note">${ex.r}</div>`;
   }
-
-  const isLast=exIdx===exs.length-1;
-  const dc=plan.color;
 
   document.getElementById('sess-ov').innerHTML=`
     <div style="display:flex;flex-direction:column;min-height:100vh">
@@ -1071,6 +1219,7 @@ function skipRest(){
 }
 
 function sessGo(dir){
+  resetMedit();
   const plan=PLAN[DAYS_KEY[sessDi]], sess=getSess(sessDs);
   sess.exIdx=Math.max(0,Math.min(plan.ejercicios.length-1,(sess.exIdx||0)+dir));
   putSess(sessDs,sess); renderSess();
