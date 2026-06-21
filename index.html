@@ -352,12 +352,14 @@ lunes:{nombre:'Lunes',emoji:'💪',grupo:'Pecho + Hombros + Core',color:'#4F46E5
     {id:'l1',n:'Calentamiento: rotaciones brazos, hombros, cuello',s:'',r:'5 min',nota:'Sin peso',mat:'',restSec:0},
     {id:'l2',n:'Press de pecho con mancuernas',s:'4',r:'× 12',nota:'Brazos a 45°, baja controlado, sube apretando pecho',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'l3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Brazos ligeramente flexionados, siente el estiramiento en pecho',mat:'10kg',restSec:60},
+    {id:'l3b',n:'Flexiones (push-ups)',s:'3',r:'× 12',nota:'Baja 3 seg, empuja rápido. Inclinado en sofá si no puedes apoyar el pie afectado',mat:'peso',restSec:60},
     {id:'l4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Espalda recta, no bloquees codos al subir',mat:'10kg',restSec:90},
     {id:'l5',n:'Elevaciones laterales sentado',s:'3',r:'× 15',nota:'Hasta altura de hombros, codos ligeramente flexionados',mat:'4kg',restSec:60},
     {id:'l6',n:'Plancha sobre antebrazos y rodillas',s:'3',r:'× 40 seg',nota:'Core apretado, respira normalmente',mat:'peso',restSec:45},
     {id:'l7',n:'Crunch abdominal',s:'3',r:'× 18',nota:'Manos cruzadas en pecho, sube solo los hombros',mat:'peso',restSec:45},
     {id:'l8',n:'Vacío abdominal',s:'3',r:'× 20 seg',nota:'Exhala, mete ombligo hacia la columna, mantén',mat:'peso',restSec:0},
     {id:'l9',n:'Estiramiento final: pecho, hombros, cuello',s:'',r:'5 min',nota:'Sostén 20 seg cada posición',mat:'',restSec:0},
+    {id:'l10',n:'Meditación: cierre de sesión',s:'',r:'5 min',nota:'Acostado o sentado. Inhala 4 · aguanta 4 · exhala 6. Visualiza tus músculos recuperándose',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'2 huevos revueltos con espinaca + ½ aguacate + 1 tostada integral','Snack AM':'1 manzana + 10 almendras','Almuerzo':'150g pechuga pollo + brócoli al vapor + ½ taza arroz integral','Snack PM':'Yogur griego natural (150g) + canela','Cena':'120g pescado blanco al horno + ensalada grande + 1 cdta aceite oliva','Noche':'Infusión de manzanilla'}},
 
@@ -372,17 +374,25 @@ martes:{nombre:'Martes',emoji:'🏋️',grupo:'Espalda + Bíceps + Cardio',color
     {id:'m7',n:'Cardio boxeo sentado (jab-cross)',s:'4',r:'× 2 min',nota:'Rápido y controlado, descansa 1 min entre rondas',mat:'peso',restSec:30},
     {id:'m8',n:'Plancha sobre antebrazos y rodillas',s:'2',r:'× 30 seg',nota:'Core de cierre',mat:'peso',restSec:45},
     {id:'m9',n:'Estiramiento: dorsal, bíceps, antebrazos',s:'',r:'5 min',nota:'',mat:'',restSec:0},
+    {id:'m10',n:'Meditación: cierre de sesión',s:'',r:'5 min',nota:'Respira profundo, suelta la tensión de espalda y brazos. Inhala 4 · aguanta 4 · exhala 6',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'Avena (½ taza) + plátano en rodajas + 1 cda chía','Snack AM':'2 claras de huevo cocidas + 1 kiwi','Almuerzo':'150g carne magra + ejotes salteados + 1 tortilla integral','Snack PM':'Zanahoria y pepino + 2 cdas hummus','Cena':'Sopa de pollo con verduras + ½ taza garbanzos','Noche':'8-10 mitades de nueces'}},
 
-miercoles:{nombre:'Miércoles',emoji:'🧘',grupo:'Descanso Activo',color:'#D97706',kcal:1600,dur:'15 min',
+miercoles:{nombre:'Miércoles',emoji:'💪',grupo:'Bíceps + Tríceps + Core',color:'#0891B2',kcal:1800,dur:'40 min',
   ejercicios:[
-    {id:'x1',n:'Respiración diafragmática',s:'',r:'5 min',nota:'Inhala 4 seg, exhala 6 seg, mano en abdomen',mat:'',restSec:0},
-    {id:'x2',n:'Vacío abdominal',s:'3',r:'× 20 seg',nota:'En silla o acostado, ombligo hacia adentro',mat:'peso',restSec:0},
-    {id:'x3',n:'Estiramiento: hombros, pecho, espalda',s:'',r:'5 min',nota:'Sostén 20 seg cada posición',mat:'',restSec:0},
-    {id:'x4',n:'Rotaciones muñecas y codos',s:'',r:'2 min',nota:'Previene tensión de días anteriores',mat:'',restSec:0},
+    {id:'x1',n:'Calentamiento: rotaciones codos, muñecas y hombros',s:'',r:'5 min',nota:'Movilidad articular antes de trabajar brazos',mat:'',restSec:0},
+    {id:'x2',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación completa al subir',mat:'10kg',restSec:60},
+    {id:'x3',n:'Curl martillo sentado',s:'3',r:'× 12',nota:'Agarre neutro, trabaja braquial y antebrazo',mat:'4kg',restSec:60},
+    {id:'x4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a lados de la cabeza, codos fijos apuntando al techo',mat:'4kg',restSec:60},
+    {id:'x5',n:'Extensión tríceps a una mano (sentado)',s:'3',r:'× 12/brazo',nota:'Codo apuntando al techo, extiende completamente',mat:'4kg',restSec:60},
+    {id:'x6',n:'Fondos en silla (tríceps)',s:'3',r:'× 12',nota:'Manos en borde silla, baja cadera, empuja con tríceps',mat:'peso',restSec:60},
+    {id:'x7',n:'Flexiones (push-ups)',s:'3',r:'× 10',nota:'Inclinado en sofá si no puedes apoyar el pie. Baja 3 seg controlado, empuja fuerte',mat:'peso',restSec:60},
+    {id:'x8',n:'Plancha sobre antebrazos y rodillas',s:'3',r:'× 40 seg',nota:'Core apretado, respira normalmente',mat:'peso',restSec:45},
+    {id:'x9',n:'Vacío abdominal',s:'3',r:'× 20 seg',nota:'Exhala, mete ombligo hacia la columna, mantén',mat:'peso',restSec:0},
+    {id:'x10',n:'Meditación: respiración consciente',s:'',r:'5-10 min',nota:'Inhala 4 seg · aguanta 4 · exhala 6. Repite 10 veces con ojos cerrados. Observa sensaciones sin juzgar',mat:'',restSec:0},
+    {id:'x11',n:'Estiramiento: bíceps, tríceps, antebrazo',s:'',r:'5 min',nota:'Sostén 20 seg cada posición',mat:'',restSec:0},
   ],
-  menu:{'Desayuno':'Tostada integral + 2 cdas mantequilla de maní + plátano','Snack AM':'1 pera + pistachos sin sal','Almuerzo':'150g pavo + ensalada mixta (aguacate, tomate, pepino) + ½ taza quinoa','Snack PM':'Queso fresco bajo en sodio + ½ taza uvas','Cena':'Tortilla 2 huevos con espinaca, champiñones y pimiento','Noche':'Té de jengibre'}},
+  menu:{'Desayuno':'Tostada integral + 2 cdas mantequilla de maní + plátano','Snack AM':'1 pera + pistachos sin sal','Almuerzo':'150g pavo + ensalada mixta (aguacate, tomate, pepino) + ½ taza quinoa','Snack PM':'Shake de proteína 25g','Cena':'Tortilla 2 huevos con espinaca, champiñones y pimiento','Noche':'Té de jengibre'}},
 
 jueves:{nombre:'Jueves',emoji:'🎯',grupo:'Hombros + Manguito Rotador + Core',color:'#7C3AED',kcal:1800,dur:'45 min',
   ejercicios:[
@@ -397,12 +407,14 @@ jueves:{nombre:'Jueves',emoji:'🎯',grupo:'Hombros + Manguito Rotador + Core',c
     {id:'j9',n:'Russian twist con mancuerna',s:'3',r:'× 24 total',nota:'Gira el torso, mancuerna de lado a lado',mat:'4kg',restSec:45},
     {id:'j10',n:'Vacío abdominal',s:'3',r:'× 20 seg',nota:'Última serie 30 seg si puedes',mat:'peso',restSec:0},
     {id:'j11',n:'Estiramiento: hombros, pecho, espalda alta',s:'',r:'5 min',nota:'',mat:'',restSec:0},
+    {id:'j12',n:'Meditación: cierre de sesión',s:'',r:'5 min',nota:'Respira lento. Visualiza los hombros y el manguito recuperándose. Inhala 4 · aguanta 4 · exhala 6',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'Smoothie: plátano + espinaca + leche almendras + 1 cda mantequilla maní','Snack AM':'1 huevo cocido + ½ aguacate','Almuerzo':'150g salmón al horno + espárragos + ½ taza arroz salvaje','Snack PM':'1 taza fresas + ¼ taza yogur griego','Cena':'120g pollo desmenuzado + calabacín salteado + ½ taza lentejas','Noche':'Infusión de tilo'}},
 
 viernes:{nombre:'Viernes',emoji:'🔥',grupo:'Tríceps + Pecho + HIIT',color:'#DC2626',kcal:1800,dur:'40 min',
   ejercicios:[
     {id:'v1',n:'Calentamiento: movilidad codos, muñecas, hombros',s:'',r:'5 min',nota:'',mat:'',restSec:0},
+    {id:'v1b',n:'Flexiones (push-ups)',s:'4',r:'× 12',nota:'Activación de pecho distinta al press — activa más serrato. Inclinado en sofá si necesitas. Empuja explosivo',mat:'peso',restSec:60},
     {id:'v2',n:'Press de pecho con mancuernas',s:'4',r:'× 10',nota:'Más pesado que el lunes, última serie al fallo',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'v3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Control total, siente el pecho trabajar',mat:'10kg',restSec:60},
     {id:'v4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a los lados de la cabeza, codos fijos',mat:'4kg',restSec:60},
@@ -412,6 +424,7 @@ viernes:{nombre:'Viernes',emoji:'🔥',grupo:'Tríceps + Pecho + HIIT',color:'#D
     {id:'v8',n:'Wrist curls (curl de muñeca)',s:'3',r:'× 15',nota:'Antebrazos en muslos, muñeca cuelga, enrolla',mat:'4kg',restSec:45},
     {id:'v9',n:'Plancha sobre antebrazos y rodillas',s:'2',r:'× 30 seg',nota:'',mat:'peso',restSec:45},
     {id:'v10',n:'Estiramiento: tríceps, pecho, hombros',s:'',r:'5 min',nota:'',mat:'',restSec:0},
+    {id:'v11',n:'Meditación: cierre de sesión',s:'',r:'5 min',nota:'Sesión intensa completada. Inhala 4 · aguanta 4 · exhala 6. El cuerpo ya trabaja la recuperación',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'2 huevos cocidos + tostada integral + ½ aguacate + tomate','Snack AM':'½ taza arándanos + 10 almendras','Almuerzo':'150g pechuga pollo + coliflor al horno con especias + tortilla integral','Snack PM':'Queso cottage + ½ taza piña','Cena':'Sopa de lentejas con verduras + ensalada verde','Noche':'Té de manzanilla'}},
 
@@ -429,6 +442,7 @@ sabado:{nombre:'Sábado',emoji:'⚡',grupo:'Espalda + Bíceps + Core',color:'#08
     {id:'s10',n:'Russian twist con mancuerna',s:'3',r:'× 26 total',nota:'Gira desde la cintura',mat:'4kg',restSec:45},
     {id:'s11',n:'Vacío abdominal',s:'3',r:'× 25 seg',nota:'',mat:'peso',restSec:0},
     {id:'s12',n:'Estiramiento completo',s:'',r:'5 min',nota:'',mat:'',restSec:0},
+    {id:'s13',n:'Meditación: cierre semanal',s:'',r:'5-10 min',nota:'Última sesión de la semana. Respira, cierra los ojos y valora lo conseguido. Inhala 4 · aguanta 4 · exhala 6',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'Panqueques de plátano (plátano + 2 huevos) + 1 cda mantequilla maní','Snack AM':'1 manzana + 8 nueces','Almuerzo':'150g carne magra + brócoli salteado + ½ taza puré de papa','Snack PM':'Sandía + ¼ taza queso fresco','Cena':'120g pescado a la plancha + ensalada + ½ taza arroz integral','Noche':'2 cuadrados chocolate negro 70% + té verde'}},
 
@@ -436,7 +450,7 @@ domingo:{nombre:'Domingo',emoji:'😌',grupo:'Descanso Completo',color:'#64748B'
   ejercicios:[
     {id:'d1',n:'Paseo corto con muletas (si el médico lo permite)',s:'',r:'10-15 min',nota:'',mat:'',restSec:0},
     {id:'d2',n:'Estiramiento suave cuerpo completo',s:'',r:'10 min',nota:'Sostén 20 seg, sin forzar',mat:'',restSec:0},
-    {id:'d3',n:'Meditación o respiración profunda',s:'',r:'10 min',nota:'',mat:'',restSec:0},
+    {id:'d3',n:'Meditación guiada / respiración profunda',s:'',r:'10-15 min',nota:'Inhala 4 · aguanta 4 · exhala 6. O pon una guiada en Spotify/YouTube. Día para reconectar contigo',mat:'',restSec:0},
     {id:'d4',n:'Planificación semana siguiente',s:'',r:'5 min',nota:'Revisa progreso, anota pesos a subir',mat:'',restSec:0},
   ],
   menu:{'Desayuno':'Avena con canela, manzana en cubos y 1 cda miel','Snack AM':'1 naranja + semillas de calabaza','Almuerzo':'150g pavo + ensalada completa + ½ taza garbanzos','Snack PM':'Pan integral + mantequilla de almendra','Cena':'Sopa de pollo casera abundante en verduras','Noche':'Infusión relajante (pasiflora o valeriana)'}}
@@ -1172,7 +1186,7 @@ martes:{kcal:1745,prot:161,hc:142,gra:48,comidas:[
    alts:[{nom:'Opción B',desc:'1 vaso leche desnatada tibia con canela',kcal:85},{nom:'Opción C',desc:'Infusión de tilo + 5 pistachos',kcal:60}]},
 ]},
 
-miercoles:{kcal:1675,prot:120,hc:162,gra:50,comidas:[
+miercoles:{kcal:1745,prot:142,hc:155,gra:50,comidas:[
   {kcal:350,prot:14,hc:50,gra:8,tit:'Tostadas con mantequilla de maní y plátano',tiempo:'5 min',
    ing:['2 tostadas de pan integral','2 cdas mantequilla de maní natural','1 plátano pequeño en rodajas'],
    pasos:['Tuesta las rebanadas de pan.','Unta la mantequilla de maní generosamente.','Coloca el plátano encima.'],
@@ -1185,10 +1199,10 @@ miercoles:{kcal:1675,prot:120,hc:162,gra:50,comidas:[
    ing:['150g pechuga de pavo','½ aguacate','½ taza quinoa cocida','1 tomate','½ pepino','1 cdta AOVE','Zumo de limón, sal'],
    pasos:['Cocina el pavo a la plancha 5 min por lado, sazona con sal.','Cuece la quinoa.','Corta aguacate, tomate y pepino en dados.','Aliña con AOVE y limón. Sirve todo junto.'],
    alts:[{nom:'Opción B',desc:'2 latas atún en agua + 80g garbanzos cocidos + ensalada mixta',kcal:450},{nom:'Opción C',desc:'Bowl lentejas 80g + espinacas + zanahoria rallada + AOVE',kcal:430}]},
-  {kcal:150,prot:8,hc:12,gra:7,tit:'Queso fresco con uvas',tiempo:'2 min',
-   ing:['80g queso fresco bajo en sodio','½ taza uvas lavadas'],
-   pasos:['Corta el queso en dados.','Mezcla con las uvas. Sirve frío.'],
-   alts:[{nom:'Opción B',desc:'1 manzana + 1 cda mantequilla de almendra',kcal:185},{nom:'Opción C',desc:'½ taza requesón + 1 cdta miel + pizca de canela',kcal:140}]},
+  {kcal:120,prot:25,hc:3,gra:1,tit:'Shake de proteína',tiempo:'2 min',
+   ing:['1 medida proteína en polvo (25g)','250ml agua fría (o 150ml leche desnatada)','Hielo opcional'],
+   pasos:['Vierte el agua fría en la shaker.','Añade la medida de proteína.','Agita bien 15-20 segundos y bebe inmediatamente.'],
+   alts:[{nom:'Con leche desnatada',desc:'Sustituye el agua por 150ml de leche: +50 kcal, más saciante',kcal:170},{nom:'Smoothie proteico',desc:'½ plátano + 1 medida proteína + 200ml leche de almendras, triturado',kcal:192}]},
   {kcal:385,prot:20,hc:30,gra:16,tit:'Tortilla de espinacas y champiñones',tiempo:'12 min',
    ing:['2 huevos grandes','1 taza espinacas baby','100g champiñones laminados','¼ pimiento rojo en dados','1 cdta AOVE','Sal, pimienta negra'],
    pasos:['Saltea el pimiento y champiñones 4 min con AOVE a fuego medio.','Añade las espinacas y saltea 2 min más hasta que se reduzcan.','Bate los huevos, salpimenta y viértelos sobre el sofrito.','Cuaja a fuego bajo 3 min, voltea y termina 2 min más.'],
@@ -1280,7 +1294,7 @@ sabado:{kcal:1752,prot:156,hc:155,gra:50,comidas:[
    alts:[{nom:'Opción B',desc:'Infusión de jengibre + 5 almendras',kcal:68},{nom:'Opción C',desc:'1 vasito kéfir natural',kcal:62}]},
 ]},
 
-domingo:{kcal:1675,prot:118,hc:162,gra:52,comidas:[
+domingo:{kcal:1627,prot:139,hc:143,gra:46,comidas:[
   {kcal:352,prot:8,hc:58,gra:8,tit:'Avena con manzana, canela y miel',tiempo:'8 min',
    ing:['½ taza copos de avena','1 manzana pequeña rallada o en cubos','1 cdta miel pura','½ cdta canela molida','200ml agua o leche desnatada'],
    pasos:['Cuece la avena en agua o leche a fuego medio 5 min, removiendo.','Añade la manzana rallada o en cubos pequeños.','Sazona con canela y miel al gusto.'],
@@ -1293,10 +1307,10 @@ domingo:{kcal:1675,prot:118,hc:162,gra:52,comidas:[
    ing:['150g pechuga de pavo','80g garbanzos cocidos (bote)','2 tazas lechuga mixta','1 tomate','½ pepino','½ pimiento rojo','1 cdta AOVE','Vinagre de manzana'],
    pasos:['Cocina el pavo a la plancha 5 min por lado. Deja reposar 2 min.','Prepara la ensalada con todos los vegetales cortados.','Añade los garbanzos escurridos y el pavo laminado.','Aliña con AOVE y vinagre de manzana.'],
    alts:[{nom:'Opción B',desc:'2 latas atún en agua + ½ taza lentejas + ensalada grande',kcal:448},{nom:'Opción C',desc:'Bowl quinoa 80g + edamame 80g + verduras encurtidas',kcal:458}]},
-  {kcal:168,prot:4,hc:22,gra:7,tit:'Pan integral con mantequilla de almendra',tiempo:'3 min',
-   ing:['1 rebanada pan integral','1.5 cdas mantequilla de almendra'],
-   pasos:['Tuesta ligeramente el pan.','Unta la mantequilla de almendra generosamente. Come despacio.'],
-   alts:[{nom:'Opción B',desc:'1 manzana mediana + 10 almendras',kcal:178},{nom:'Opción C',desc:'Requesón 100g + 1 cdta miel',kcal:128}]},
+  {kcal:120,prot:25,hc:3,gra:1,tit:'Shake de proteína',tiempo:'2 min',
+   ing:['1 medida proteína en polvo (25g)','250ml agua fría (o 150ml leche desnatada)','Hielo opcional'],
+   pasos:['Vierte el agua fría en la shaker.','Añade la medida de proteína.','Agita bien 15-20 segundos y bebe inmediatamente.'],
+   alts:[{nom:'Con leche desnatada',desc:'Sustituye el agua por 150ml de leche: +50 kcal, más saciante',kcal:170},{nom:'Smoothie proteico',desc:'½ plátano + 1 medida proteína + 200ml leche de almendras, triturado',kcal:192}]},
   {kcal:370,prot:30,hc:36,gra:10,tit:'Sopa de pollo casera con verduras',tiempo:'35 min',
    ing:['200g muslo de pollo sin piel','1 zanahoria','1 puerro','1 tallo apio','1 nabo pequeño','800ml caldo de pollo bajo en sodio','Sal, hoja de laurel, pimienta'],
    pasos:['Lleva el caldo a ebullición con el laurel.','Añade el pollo limpio y cocina 20 min a fuego medio.','Retira el pollo, desmenuza y reserva.','Añade las verduras cortadas, cocina 10 min más. Reincorpora el pollo y sirve.'],
