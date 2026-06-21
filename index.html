@@ -119,7 +119,10 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .sess-close{background:var(--s2);border:none;color:var(--tx);width:34px;height:34px;border-radius:50%;font-size:15px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .sess-close:active{opacity:.7}
 
-.sess-media{display:flex;flex-direction:column;align-items:center;justify-content:center;height:148px;background:var(--s1);border-top:1px solid var(--br);border-bottom:1px solid var(--br);gap:6px}
+.sess-media{background:var(--s1);border-top:1px solid var(--br);border-bottom:1px solid var(--br)}
+.sess-media-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;height:148px;gap:6px}
+.sess-media-vid{aspect-ratio:16/9;width:100%;overflow:hidden;background:#000}
+.sess-media-vid iframe{width:100%;height:100%;border:none;display:block}
 
 .sess-body{padding:18px 18px 0;flex:1}
 .sess-ex-name{font-size:20px;font-weight:800;line-height:1.3;margin-bottom:8px}
@@ -228,7 +231,7 @@ const PLAN = {
 lunes:{nombre:'Lunes',emoji:'💪',grupo:'Pecho + Hombros + Core',color:'#4F46E5',kcal:1800,dur:'40 min',
   ejercicios:[
     {id:'l1',n:'Calentamiento: rotaciones brazos, hombros, cuello',s:'',r:'5 min',nota:'Sin peso',mat:'',restSec:0},
-    {id:'l2',n:'Press de pecho con mancuernas',s:'4',r:'× 12',nota:'Brazos a 45°, baja controlado, sube apretando pecho',mat:'10kg',restSec:90},
+    {id:'l2',n:'Press de pecho con mancuernas',s:'4',r:'× 12',nota:'Brazos a 45°, baja controlado, sube apretando pecho',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'l3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Brazos ligeramente flexionados, siente el estiramiento en pecho',mat:'10kg',restSec:60},
     {id:'l4',n:'Press de hombros sentado',s:'4',r:'× 10',nota:'Espalda recta, no bloquees codos al subir',mat:'10kg',restSec:90},
     {id:'l5',n:'Elevaciones laterales sentado',s:'3',r:'× 15',nota:'Hasta altura de hombros, codos ligeramente flexionados',mat:'4kg',restSec:60},
@@ -242,7 +245,7 @@ lunes:{nombre:'Lunes',emoji:'💪',grupo:'Pecho + Hombros + Core',color:'#4F46E5
 martes:{nombre:'Martes',emoji:'🏋️',grupo:'Espalda + Bíceps + Cardio',color:'#059669',kcal:1800,dur:'45 min',
   ejercicios:[
     {id:'m1',n:'Calentamiento: movilidad escápula, rotaciones',s:'',r:'5 min',nota:'',mat:'',restSec:0},
-    {id:'m2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Espalda paralela, tira codo hacia arriba, aprieta omóplato',mat:'10kg',restSec:90},
+    {id:'m2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Espalda paralela, tira codo hacia arriba, aprieta omóplato',mat:'10kg',restSec:90,video:'radVWm-e81I'},
     {id:'m3',n:'Remo con mancuernas a dos manos (inclinado)',s:'3',r:'× 12',nota:'Pecho apoyado en muslos, tira ambas juntas',mat:'10kg',restSec:90},
     {id:'m4',n:'Pullover con mancuerna',s:'3',r:'× 12',nota:'Brazos extendidos, baja detrás cabeza, siente el dorsal',mat:'10kg',restSec:60},
     {id:'m5',n:'Curl de bíceps alterno sentado',s:'4',r:'× 12',nota:'Codos fijos al costado, supinación al subir',mat:'10kg',restSec:60},
@@ -281,7 +284,7 @@ jueves:{nombre:'Jueves',emoji:'🎯',grupo:'Hombros + Manguito Rotador + Core',c
 viernes:{nombre:'Viernes',emoji:'🔥',grupo:'Tríceps + Pecho + HIIT',color:'#DC2626',kcal:1800,dur:'40 min',
   ejercicios:[
     {id:'v1',n:'Calentamiento: movilidad codos, muñecas, hombros',s:'',r:'5 min',nota:'',mat:'',restSec:0},
-    {id:'v2',n:'Press de pecho con mancuernas',s:'4',r:'× 10',nota:'Más pesado que el lunes, última serie al fallo',mat:'10kg',restSec:90},
+    {id:'v2',n:'Press de pecho con mancuernas',s:'4',r:'× 10',nota:'Más pesado que el lunes, última serie al fallo',mat:'10kg',restSec:90,video:'v-oZh21hDyI'},
     {id:'v3',n:'Aperturas (flyes) con mancuernas',s:'3',r:'× 12',nota:'Control total, siente el pecho trabajar',mat:'10kg',restSec:60},
     {id:'v4',n:'Skull crushers (extensión tríceps acostado)',s:'4',r:'× 12',nota:'Baja mancuernas a los lados de la cabeza, codos fijos',mat:'4kg',restSec:60},
     {id:'v5',n:'Extensión tríceps a una mano (sentado)',s:'3',r:'× 12/brazo',nota:'Codo apuntando al techo, extiende el brazo',mat:'4kg',restSec:60},
@@ -296,7 +299,7 @@ viernes:{nombre:'Viernes',emoji:'🔥',grupo:'Tríceps + Pecho + HIIT',color:'#D
 sabado:{nombre:'Sábado',emoji:'⚡',grupo:'Espalda + Bíceps + Core',color:'#0891B2',kcal:1800,dur:'50 min',
   ejercicios:[
     {id:'s1',n:'Calentamiento completo',s:'',r:'5 min',nota:'',mat:'',restSec:0},
-    {id:'s2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Aprieta omóplato al subir',mat:'10kg',restSec:90},
+    {id:'s2',n:'Remo con mancuerna a una mano',s:'4',r:'× 12/lado',nota:'Aprieta omóplato al subir',mat:'10kg',restSec:90,video:'radVWm-e81I'},
     {id:'s3',n:'Remo con mancuernas a dos manos',s:'3',r:'× 12',nota:'Controla el peso, no uses impulso',mat:'10kg',restSec:90},
     {id:'s4',n:'Pullover con mancuerna',s:'3',r:'× 12',nota:'Siente el dorsal trabajar',mat:'10kg',restSec:60},
     {id:'s5',n:'Curl de bíceps alterno',s:'4',r:'× 10',nota:'Más pesado que el martes, última serie al fallo',mat:'10kg',restSec:60},
@@ -702,8 +705,18 @@ function renderSess(){
       </div>
 
       <div class="sess-media">
-        <div style="font-size:52px;margin-bottom:4px">${plan.emoji}</div>
-        <div style="font-size:11px;color:var(--br)">Foto · vídeo · próximamente</div>
+        ${ex.video
+          ? `<div class="sess-media-vid">
+               <iframe src="https://www.youtube.com/embed/${ex.video}?rel=0&modestbranding=1"
+                 frameborder="0" allowfullscreen
+                 allow="accelerometer;clipboard-write;encrypted-media;gyroscope;picture-in-picture">
+               </iframe>
+             </div>`
+          : `<div class="sess-media-ph">
+               <div style="font-size:52px;margin-bottom:4px">${plan.emoji}</div>
+               <div style="font-size:11px;color:var(--br)">Foto · vídeo · próximamente</div>
+             </div>`
+        }
       </div>
 
       <div class="sess-body">
