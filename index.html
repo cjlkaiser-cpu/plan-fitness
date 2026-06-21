@@ -168,10 +168,99 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
   .reset-btn{max-width:468px;margin-left:auto;margin-right:auto;display:block}
   #sess-ov .sess-hdr,#sess-ov .sess-media,#sess-ov .sess-body,#sess-ov .sess-nav{max-width:500px;margin-left:auto;margin-right:auto;width:100%}
 }
+
+/* ═══════════════════════════════════════
+   BOTTOM NAV
+═══════════════════════════════════════ */
+#bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--s1);border-top:1px solid var(--br);display:flex;padding-bottom:env(safe-area-inset-bottom)}
+.bnav-btn{flex:1;background:transparent;border:none;color:var(--tx2);padding:11px 8px 9px;font-size:12px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:color .15s;-webkit-tap-highlight-color:transparent}
+.bnav-btn.active{color:var(--acc)}
+.bnav-ico{font-size:22px;line-height:1}
+.bnav-lbl{font-size:11px}
+
+/* ═══════════════════════════════════════
+   NUTRI VIEW
+═══════════════════════════════════════ */
+#nutri-view{padding-bottom:80px}
+.nut-day-hdr{background:var(--s1);padding:14px 20px 10px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--br)}
+.nut-day-title{font-size:18px;font-weight:800;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.nut-day-tabs{display:flex;overflow-x:auto;scrollbar-width:none;gap:8px}
+.nut-day-tabs::-webkit-scrollbar{display:none}
+.ndtab{flex-shrink:0;background:var(--bg);border:2px solid var(--br);border-radius:12px;padding:9px 12px;cursor:pointer;text-align:center;min-width:50px;transition:all .15s;user-select:none}
+.ndtab.active{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 15%,transparent)}
+.ndtab-ab{font-size:13px;font-weight:700}
+.ndtab-kcal{font-size:10px;color:var(--tx2);margin-top:2px}
+/* Macro summary */
+.macro-summary{margin:14px 16px;background:var(--s1);border-radius:14px;padding:16px;border:1px solid var(--br)}
+.macro-kcal{font-size:26px;font-weight:900;margin-bottom:12px;display:flex;align-items:baseline;gap:8px}
+.macro-kcal-num{color:var(--acc)}
+.macro-kcal-unit{font-size:13px;color:var(--tx2);font-weight:600}
+.macro-bars{display:flex;flex-direction:column;gap:9px}
+.macro-bar-row{display:flex;align-items:center;gap:8px}
+.macro-bar-lbl{font-size:11px;font-weight:700;width:66px;color:var(--tx2)}
+.macro-bar-track{flex:1;height:6px;background:var(--s2);border-radius:3px;overflow:hidden}
+.macro-bar-fill{height:100%;border-radius:3px;transition:width .6s ease}
+.macro-bar-val{font-size:11px;font-weight:700;width:36px;text-align:right}
+.macro-chips{display:flex;gap:7px;margin-top:13px;flex-wrap:wrap}
+.macro-chip{padding:5px 10px;border-radius:8px;font-size:12px;font-weight:700}
+/* Meal cards */
+.meal-cards{padding:0 16px;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.meal-card{background:var(--s1);border-radius:14px;border:1px solid var(--br);overflow:hidden}
+.meal-card-hdr{display:flex;align-items:center;padding:14px 14px;cursor:pointer;gap:11px;user-select:none}
+.meal-card-hdr:active{opacity:.8}
+.meal-card-ico{font-size:26px;flex-shrink:0}
+.meal-card-info{flex:1;min-width:0}
+.meal-card-name{font-size:13px;font-weight:700;line-height:1.3}
+.meal-card-meta{font-size:11px;color:var(--tx2);margin-top:2px}
+.meal-card-kcal{font-size:13px;font-weight:800;color:var(--acc);flex-shrink:0}
+.meal-card-arrow{color:var(--tx2);font-size:11px;flex-shrink:0;margin-left:4px;transition:transform .2s}
+.meal-card-arrow.open{transform:rotate(180deg)}
+.meal-card-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.meal-card-body.open{max-height:900px}
+.meal-card-inner{padding:14px 14px 16px;border-top:1px solid var(--br)}
+.meal-recipe-title{font-size:13px;font-weight:800;margin-bottom:10px;color:var(--tx)}
+.meal-ing-list{margin-bottom:13px}
+.meal-ing-item{font-size:12px;color:var(--tx2);padding:5px 0;border-bottom:1px solid var(--s2);line-height:1.4}
+.meal-ing-item:last-child{border-bottom:none}
+.meal-steps{margin-bottom:14px}
+.meal-step{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+.step-num{background:var(--acc);color:#fff;width:20px;height:20px;border-radius:50%;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-txt{font-size:12px;color:var(--tx2);line-height:1.55;flex:1}
+.meal-macro-row{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap}
+.meal-macro-chip{padding:4px 9px;border-radius:7px;font-size:11px;font-weight:700}
+.meal-alts-title{font-size:10px;font-weight:800;color:var(--tx2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.meal-alt{background:var(--s2);border-radius:10px;padding:10px 12px;margin-bottom:7px}
+.meal-alt:last-child{margin-bottom:0}
+.meal-alt-nom{font-size:12px;font-weight:700;margin-bottom:3px}
+.meal-alt-desc{font-size:11px;color:var(--tx2);line-height:1.4}
+.meal-alt-kcal{font-size:11px;color:var(--acc);font-weight:700;margin-top:5px}
+/* Shopping modal */
+#shop-modal{display:none;position:fixed;inset:0;z-index:8000;background:rgba(15,23,42,.97);flex-direction:column}
+.shop-modal-hdr{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--br);gap:12px;flex-shrink:0}
+.shop-modal-hdr h2{flex:1;font-size:18px;font-weight:800}
+.shop-close{background:var(--s2);border:none;color:var(--tx);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center}
+.shop-modal-body{flex:1;overflow-y:auto;padding:16px;-webkit-overflow-scrolling:touch}
+.shop-cat{margin-bottom:20px}
+.shop-cat-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:9px;padding-left:4px}
+.shop-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--s1);border-radius:9px;margin-bottom:5px;cursor:pointer;transition:opacity .15s;user-select:none}
+.shop-item:active{opacity:.7}
+.shop-item.checked{opacity:.45}
+.shop-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--br);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;transition:all .15s}
+.shop-item.checked .shop-check{background:var(--ok);border-color:var(--ok);color:#fff}
+.shop-item-lbl{font-size:13px;flex:1}
+.shop-open-btn{display:block;margin:0 16px 20px;background:var(--s1);border:2px solid var(--acc);color:var(--acc);padding:14px;border-radius:13px;font-size:14px;font-weight:800;cursor:pointer;text-align:center;width:calc(100% - 32px);transition:opacity .15s}
+.shop-open-btn:active{opacity:.8}
+@media(min-width:520px){
+  #nutri-view .nut-day-hdr,#nutri-view .macro-summary,#nutri-view .meal-cards,
+  #nutri-view .shop-open-btn{max-width:500px;margin-left:auto;margin-right:auto;display:block}
+  #nutri-view .macro-summary{display:block}
+  #nutri-view .meal-cards{display:flex}
+}
 </style>
 </head>
 <body>
 
+<div id="plan-view">
 <!-- MAIN VIEW -->
 <div class="hdr">
   <div class="hdr-top">
@@ -210,7 +299,33 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
   </div>
 </div>
 <button class="reset-btn" onclick="confirmReset()">⚙ Reiniciar todos los datos</button>
+</div><!-- end #plan-view -->
+
+<!-- NUTRI VIEW -->
+<div id="nutri-view" style="display:none">
+  <div id="nutri-content"></div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav id="bottom-nav">
+  <button class="bnav-btn active" id="nav-plan" onclick="showView('plan')">
+    <span class="bnav-ico">💪</span><span class="bnav-lbl">Entreno</span>
+  </button>
+  <button class="bnav-btn" id="nav-nutri" onclick="showView('nutri')">
+    <span class="bnav-ico">🥗</span><span class="bnav-lbl">Nutrición</span>
+  </button>
+</nav>
+
 <div class="toast" id="toast"></div>
+
+<!-- SHOPPING MODAL (z-index 8000) -->
+<div id="shop-modal">
+  <div class="shop-modal-hdr">
+    <h2>🛒 Lista de la compra</h2>
+    <button class="shop-close" onclick="shopClose()">✕</button>
+  </div>
+  <div class="shop-modal-body" id="shop-body"></div>
+</div>
 
 <!-- SESSION OVERLAY (z-index 9000) -->
 <div id="sess-ov"></div>
@@ -901,6 +1016,369 @@ function sessDone(){
       </button>
     </div>
   `;
+}
+
+// ═══════════════════════════════════════════════════════
+// NUTRITION DATA
+// ═══════════════════════════════════════════════════════
+const MEAL_SLOTS=[
+  {emoji:'🌅',nom:'Desayuno',hora:'7:30'},
+  {emoji:'🍎',nom:'Snack AM',hora:'10:30'},
+  {emoji:'☀️',nom:'Almuerzo',hora:'14:00'},
+  {emoji:'🥜',nom:'Snack PM',hora:'17:30'},
+  {emoji:'🌙',nom:'Cena',hora:'20:30'},
+  {emoji:'🌿',nom:'Noche',hora:'22:00'},
+];
+
+const NUT={
+lunes:{kcal:1800,prot:138,hc:163,gra:52,comidas:[
+  {kcal:370,prot:26,hc:30,gra:13,tit:'Revuelto de huevo y espinacas con tostada',tiempo:'10 min',
+   ing:['2 huevos grandes','1 taza espinacas frescas','½ aguacate maduro','1 tostada integral 40g','Spray de aceite, sal, pimienta'],
+   pasos:['Saltea las espinacas 2 min a fuego medio con spray de aceite.','Bate los huevos, salpimenta y vierte sobre las espinacas.','Revuelve suavemente 3 min hasta cuajar a tu gusto.','Sirve con la tostada y el aguacate en láminas finas.'],
+   alts:[{nom:'Opción B',desc:'Tortilla 2 huevos + 1 rebanada pan integral + rodajas de tomate',kcal:310},{nom:'Opción C',desc:'Yogur griego 200g + granola sin azúcar 30g + 1 puñado frutos rojos',kcal:330}]},
+  {kcal:195,prot:5,hc:22,gra:9,tit:'Manzana con almendras',tiempo:'1 min',
+   ing:['1 manzana mediana','15 almendras crudas sin sal'],
+   pasos:['Lava y corta la manzana en gajos.','Come despacio junto a las almendras para saciarte mejor.'],
+   alts:[{nom:'Opción B',desc:'1 pera + 8 nueces',kcal:200},{nom:'Opción C',desc:'½ taza arándanos + 2 cdas semillas de girasol',kcal:175}]},
+  {kcal:510,prot:42,hc:50,gra:9,tit:'Pechuga de pollo con brócoli y arroz integral',tiempo:'20 min',
+   ing:['150g pechuga de pollo','1 taza brócoli en florets','½ taza arroz integral cocido','1 diente ajo laminado','1 cdta AOVE','Sal, cúrcuma, pimienta negra'],
+   pasos:['Cuece el arroz según indicaciones del paquete.','Marca la pechuga 5 min por lado en sartén con ajo y AOVE.','Vaporiza el brócoli 6 min hasta tierno-crujiente.','Sirve todo junto. Sazona con cúrcuma y pimienta.'],
+   alts:[{nom:'Opción B',desc:'150g pavo plancha + judías verdes + ½ taza quinoa',kcal:490},{nom:'Opción C',desc:'2 latas atún en agua + garbanzos 80g + ensalada grande + AOVE',kcal:470}]},
+  {kcal:180,prot:15,hc:14,gra:5,tit:'Yogur griego con canela y frutos rojos',tiempo:'2 min',
+   ing:['150g yogur griego natural 0%','1 puñado frutos rojos frescos o congelados','½ cdta canela molida'],
+   pasos:['Vierte el yogur en un bol.','Añade los frutos rojos y espolvorea la canela.'],
+   alts:[{nom:'Opción B',desc:'Requesón 100g + 1 cdta miel + pizca de nuez moscada',kcal:160},{nom:'Opción C',desc:'2 lonchas pavo + 1 palito queso bajo en grasa',kcal:145}]},
+  {kcal:470,prot:38,hc:42,gra:12,tit:'Salmón al horno con quinoa y ensalada',tiempo:'25 min',
+   ing:['130g salmón fresco','½ taza quinoa cocida','2 tazas mezcla hoja verde','½ tomate en dados','½ pepino','1 cdta AOVE','Zumo de limón, eneldo seco'],
+   pasos:['Precalienta el horno a 200°C.','Coloca el salmón en papel vegetal, sazona con limón y eneldo, hornea 15 min.','Cuece la quinoa según instrucciones.','Prepara la ensalada y aliña con AOVE y unas gotas de limón. Sirve todo junto.'],
+   alts:[{nom:'Opción B',desc:'130g merluza al vapor + ½ taza lentejas + tomate cherry',kcal:440},{nom:'Opción C',desc:'2 huevos a la plancha + espárragos trigueros + ½ taza arroz integral',kcal:410}]},
+  {kcal:75,prot:2,hc:6,gra:5,tit:'Infusión y chocolate negro',tiempo:'3 min',
+   ing:['1 infusión de manzanilla','2 cuadrados chocolate negro 70%+'],
+   pasos:['Infusiona la manzanilla 5 min en agua hirviendo.','Saborea el chocolate despacio mientras bebes el té.'],
+   alts:[{nom:'Opción B',desc:'Té verde + 1 kiwi pequeño',kcal:50},{nom:'Opción C',desc:'Caldo vegetal caliente + 5 almendras',kcal:80}]},
+]},
+
+martes:{kcal:1800,prot:140,hc:161,gra:54,comidas:[
+  {kcal:360,prot:18,hc:52,gra:8,tit:'Avena caliente con plátano y chía',tiempo:'8 min',
+   ing:['½ taza copos de avena','1 plátano pequeño en rodajas','1 cda semillas de chía','200ml leche desnatada o de almendras','Canela al gusto'],
+   pasos:['Calienta la leche en un cazo a fuego medio.','Añade los copos y cocina 4-5 min removiendo.','Vierte en bol, añade el plátano y la chía.','Espolvorea canela al gusto.'],
+   alts:[{nom:'Opción B',desc:'2 tostadas integrales + 1 huevo pochado + tomate natural rallado',kcal:320},{nom:'Opción C',desc:'Smoothie: plátano + espinacas + leche almendras + 1 cda mantequilla de maní',kcal:350}]},
+  {kcal:185,prot:14,hc:8,gra:10,tit:'Claras cocidas con kiwi',tiempo:'10 min',
+   ing:['2 claras de huevo cocidas','1 kiwi mediano pelado'],
+   pasos:['Cuece los huevos 10 min, pela y extrae las claras.','Corta el kiwi y come juntos.'],
+   alts:[{nom:'Opción B',desc:'1 barrita de proteína ~200kcal + 1 naranja',kcal:275},{nom:'Opción C',desc:'½ taza edamame vaina + 1 mandarina',kcal:165}]},
+  {kcal:520,prot:42,hc:48,gra:11,tit:'Ternera magra con ejotes y tortilla integral',tiempo:'20 min',
+   ing:['150g ternera magra en filete','1 taza ejotes frescos o congelados','1 tortilla integral grande','1 diente ajo','1 cdta AOVE','Pimentón dulce, sal'],
+   pasos:['Saltea los ejotes con ajo y AOVE 5 min a fuego vivo.','Cocina la ternera 3-4 min por lado. Trocea.','Calienta la tortilla 1 min por lado.','Coloca el relleno sobre la tortilla. Sazona con pimentón.'],
+   alts:[{nom:'Opción B',desc:'150g bacalao desalado al horno + patata 80g + brócoli',kcal:485},{nom:'Opción C',desc:'Bowl quinoa 80g + garbanzos 100g + verduras asadas + AOVE',kcal:510}]},
+  {kcal:175,prot:4,hc:22,gra:7,tit:'Zanahoria y pepino con hummus',tiempo:'3 min',
+   ing:['1 zanahoria mediana','½ pepino','2 cdas hummus (casero o comercial)'],
+   pasos:['Corta zanahoria y pepino en bastones.','Sirve con el hummus como dip. Come despacio.'],
+   alts:[{nom:'Opción B',desc:'Bastones de apio + 2 cdas guacamole fresco',kcal:155},{nom:'Opción C',desc:'1 manzana + 1 cda mantequilla de almendra',kcal:195}]},
+  {kcal:480,prot:42,hc:41,gra:12,tit:'Sopa de pollo y garbanzos con verduras',tiempo:'25 min',
+   ing:['120g pechuga de pollo desmenuzada','80g garbanzos cocidos (bote)','1 zanahoria en rodajas','1 tallo apio','½ cebolla','500ml caldo de pollo bajo en sodio','Perejil fresco, cúrcuma'],
+   pasos:['Sofríe cebolla, zanahoria y apio 5 min con spray.','Añade el caldo y lleva a ebullición.','Incorpora el pollo desmenuzado y los garbanzos, cocina 15 min a fuego suave.','Sazona con cúrcuma y perejil fresco.'],
+   alts:[{nom:'Opción B',desc:'150g pechuga plancha + espinacas salteadas + ½ taza arroz',kcal:455},{nom:'Opción C',desc:'Tortilla 2 huevos + champiñones + queso fresco + ensalada verde',kcal:425}]},
+  {kcal:80,prot:4,hc:4,gra:5,tit:'Nueces de noche',tiempo:'1 min',
+   ing:['8-10 mitades de nueces'],
+   pasos:['Toma las nueces tranquilamente, masticando despacio.','Los ácidos grasos omega-3 ayudan a la recuperación muscular nocturna.'],
+   alts:[{nom:'Opción B',desc:'1 vaso leche desnatada tibia con canela',kcal:85},{nom:'Opción C',desc:'Infusión de tilo + 5 pistachos',kcal:60}]},
+]},
+
+miercoles:{kcal:1600,prot:118,hc:150,gra:48,comidas:[
+  {kcal:350,prot:14,hc:50,gra:8,tit:'Tostadas con mantequilla de maní y plátano',tiempo:'5 min',
+   ing:['2 tostadas de pan integral','2 cdas mantequilla de maní natural','1 plátano pequeño en rodajas'],
+   pasos:['Tuesta las rebanadas de pan.','Unta la mantequilla de maní generosamente.','Coloca el plátano encima.'],
+   alts:[{nom:'Opción B',desc:'Yogur griego 200g + granola artesana 30g + miel',kcal:320},{nom:'Opción C',desc:'2 huevos revueltos + 1 tostada integral + ½ aguacate',kcal:370}]},
+  {kcal:165,prot:5,hc:18,gra:8,tit:'Pera con pistachos',tiempo:'1 min',
+   ing:['1 pera mediana','20 pistachos sin sal'],
+   pasos:['Lava y corta la pera en gajos.','Come junto a los pistachos.'],
+   alts:[{nom:'Opción B',desc:'1 naranja + 10 almendras',kcal:155},{nom:'Opción C',desc:'½ taza fresas + 1 cda semillas de girasol',kcal:105}]},
+  {kcal:480,prot:36,hc:50,gra:10,tit:'Pavo con ensalada de aguacate y quinoa',tiempo:'20 min',
+   ing:['150g pechuga de pavo','½ aguacate','½ taza quinoa cocida','1 tomate','½ pepino','1 cdta AOVE','Zumo de limón, sal'],
+   pasos:['Cocina el pavo a la plancha 5 min por lado, sazona con sal.','Cuece la quinoa.','Corta aguacate, tomate y pepino en dados.','Aliña con AOVE y limón. Sirve todo junto.'],
+   alts:[{nom:'Opción B',desc:'2 latas atún en agua + 80g garbanzos cocidos + ensalada mixta',kcal:450},{nom:'Opción C',desc:'Bowl lentejas 80g + espinacas + zanahoria rallada + AOVE',kcal:430}]},
+  {kcal:150,prot:8,hc:12,gra:7,tit:'Queso fresco con uvas',tiempo:'2 min',
+   ing:['80g queso fresco bajo en sodio','½ taza uvas lavadas'],
+   pasos:['Corta el queso en dados.','Mezcla con las uvas. Sirve frío.'],
+   alts:[{nom:'Opción B',desc:'1 manzana + 1 cda mantequilla de almendra',kcal:185},{nom:'Opción C',desc:'½ taza requesón + 1 cdta miel + pizca de canela',kcal:140}]},
+  {kcal:385,prot:20,hc:30,gra:16,tit:'Tortilla de espinacas y champiñones',tiempo:'12 min',
+   ing:['2 huevos grandes','1 taza espinacas baby','100g champiñones laminados','¼ pimiento rojo en dados','1 cdta AOVE','Sal, pimienta negra'],
+   pasos:['Saltea el pimiento y champiñones 4 min con AOVE a fuego medio.','Añade las espinacas y saltea 2 min más hasta que se reduzcan.','Bate los huevos, salpimenta y viértelos sobre el sofrito.','Cuaja a fuego bajo 3 min, voltea y termina 2 min más.'],
+   alts:[{nom:'Opción B',desc:'120g merluza al vapor + ensalada verde + 1 tostada integral',kcal:355},{nom:'Opción C',desc:'1 bol sopa minestrone casera + 30g pan integral',kcal:345}]},
+  {kcal:70,prot:0,hc:6,gra:0,tit:'Té de jengibre',tiempo:'5 min',
+   ing:['1 rodaja jengibre fresco','Agua caliente','1 cdta miel (opcional)'],
+   pasos:['Infusiona el jengibre 5 min en agua hirviendo.','Añade miel si deseas dulzor natural.'],
+   alts:[{nom:'Opción B',desc:'Infusión de menta + 5 almendras',kcal:60},{nom:'Opción C',desc:'Caldo vegetal caliente sin grasa',kcal:30}]},
+]},
+
+jueves:{kcal:1800,prot:136,hc:166,gra:54,comidas:[
+  {kcal:380,prot:14,hc:48,gra:12,tit:'Smoothie de espinacas, plátano y maní',tiempo:'5 min',
+   ing:['1 plátano (puede estar congelado)','1 taza espinacas baby','200ml leche de almendras sin azúcar','1 cda mantequilla de maní','½ cdta canela molida'],
+   pasos:['Pon todos los ingredientes en la batidora.','Bate 45 segundos hasta obtener textura cremosa.','Sirve inmediatamente para preservar los nutrientes.'],
+   alts:[{nom:'Opción B',desc:'2 huevos cocidos + 1 tostada integral + rodajas de tomate',kcal:330},{nom:'Opción C',desc:'Avena nocturna: ½ taza avena + yogur griego + frutos rojos (preparar noche anterior)',kcal:360}]},
+  {kcal:190,prot:12,hc:10,gra:10,tit:'Huevo cocido con aguacate',tiempo:'12 min',
+   ing:['1 huevo cocido grande','½ aguacate pequeño','Sal, pimienta, zumo de limón'],
+   pasos:['Cuece el huevo en agua hirviendo 10 min. Enfría y pela.','Aplasta el aguacate con tenedor, sazona con sal y limón.','Come juntos.'],
+   alts:[{nom:'Opción B',desc:'1 taza edamame en vaina + 1 kiwi',kcal:175},{nom:'Opción C',desc:'Yogur griego 100g + 1 cda semillas de chía + 1 mandarina',kcal:155}]},
+  {kcal:520,prot:42,hc:48,gra:12,tit:'Salmón al horno con arroz salvaje y espárragos',tiempo:'25 min',
+   ing:['150g salmón fresco en filete','½ taza arroz salvaje o integral cocido','6 espárragos trigueros','1 cdta AOVE','Limón, eneldo seco, sal'],
+   pasos:['Precalienta el horno a 200°C.','Coloca salmón y espárragos en bandeja forrada con papel vegetal.','Riega con AOVE y zumo de limón, espolvorea eneldo.','Hornea 15-18 min. Sirve sobre el arroz.'],
+   alts:[{nom:'Opción B',desc:'150g atún fresco a la plancha + ½ taza quinoa + tomate cherry',kcal:500},{nom:'Opción C',desc:'2 huevos escalfados + ½ taza lentejas cocidas + verduras asadas',kcal:465}]},
+  {kcal:170,prot:8,hc:16,gra:7,tit:'Fresas con yogur griego',tiempo:'2 min',
+   ing:['1 taza fresas frescas lavadas','¼ taza yogur griego natural','1 cdta miel pura'],
+   pasos:['Corta las fresas a la mitad.','Mezcla con el yogur en un bol. Añade miel.'],
+   alts:[{nom:'Opción B',desc:'1 manzana mediana + 10 almendras crudas',kcal:178},{nom:'Opción C',desc:'½ taza uvas + queso fresco 50g',kcal:148}]},
+  {kcal:465,prot:38,hc:42,gra:11,tit:'Pollo desmenuzado con calabacín y lentejas',tiempo:'20 min',
+   ing:['120g pechuga de pollo cocida y desmenuzada','1 calabacín mediano en dados','½ taza lentejas cocidas (bote)','1 diente ajo','1 cdta AOVE','Comino molido, sal'],
+   pasos:['Saltea el ajo y el calabacín en dados 5 min con AOVE a fuego medio.','Añade las lentejas y el pollo desmenuzado, mezcla y cocina 3 min.','Sazona con comino y sal al gusto.'],
+   alts:[{nom:'Opción B',desc:'130g lubina al vapor + brócoli + ½ taza arroz integral',kcal:438},{nom:'Opción C',desc:'Tortilla 3 claras + 1 yema + verduras mixtas + ensalada',kcal:378}]},
+  {kcal:75,prot:0,hc:6,gra:0,tit:'Infusión de tilo para dormir',tiempo:'4 min',
+   ing:['1 bolsita infusión de tilo o manzanilla','Agua caliente'],
+   pasos:['Infusiona 5 min en agua hirviendo.','Bebe caliente y tranquilamente 30 min antes de dormir.'],
+   alts:[{nom:'Opción B',desc:'Té de valeriana + 2 onzas chocolate negro 85%',kcal:88},{nom:'Opción C',desc:'Leche caliente desnatada con canela',kcal:82}]},
+]},
+
+viernes:{kcal:1800,prot:138,hc:164,gra:56,comidas:[
+  {kcal:375,prot:24,hc:32,gra:11,tit:'Huevos cocidos con tostada, aguacate y tomate',tiempo:'12 min',
+   ing:['2 huevos grandes','1 tostada integral 40g','½ aguacate maduro','1 tomate mediano en rodajas','Sal, pimienta, AOVE'],
+   pasos:['Cuece los huevos en agua hirviendo 10 min. Enfría y pela.','Tuesta el pan.','Pela y lamina el aguacate, sazona con sal y pimienta.','Sirve todo junto con el tomate en rodajas. Añade unas gotas de AOVE.'],
+   alts:[{nom:'Opción B',desc:'Tortilla 2 huevos + 1 rebanada pan integral + tomate natural',kcal:310},{nom:'Opción C',desc:'Avena con canela ½ taza + 1 huevo revuelto aparte',kcal:335}]},
+  {kcal:180,prot:3,hc:22,gra:8,tit:'Arándanos con almendras',tiempo:'1 min',
+   ing:['½ taza arándanos frescos o descongelados','10 almendras crudas sin sal'],
+   pasos:['Mezcla en un bol. Come despacio. Simple y efectivo antioxidante.'],
+   alts:[{nom:'Opción B',desc:'1 kiwi + 8 nueces',kcal:188},{nom:'Opción C',desc:'½ plátano + 1 cda crema de cacahuete',kcal:158}]},
+  {kcal:520,prot:42,hc:50,gra:11,tit:'Pechuga al horno con coliflor especiada y tortilla',tiempo:'25 min',
+   ing:['150g pechuga de pollo','½ taza coliflor en florets','1 tortilla integral pequeña','Pimentón ahumado, ajo en polvo, cúrcuma','1 cdta AOVE, sal'],
+   pasos:['Marina el pollo 10 min con especias, AOVE y sal.','Coloca pollo y coliflor en bandeja. Hornea a 200°C 20-22 min.','Calienta la tortilla en sartén seca 1 min.','Sirve el pollo sobre la tortilla con la coliflor al lado.'],
+   alts:[{nom:'Opción B',desc:'150g atún plancha + judías verdes + ½ taza arroz',kcal:488},{nom:'Opción C',desc:'150g pavo + boniato asado 80g + ensalada de hoja verde',kcal:508}]},
+  {kcal:190,prot:12,hc:10,gra:10,tit:'Queso cottage con piña',tiempo:'2 min',
+   ing:['100g queso cottage bajo en grasa','½ taza piña en trozos (fresca o conserva sin azúcar)','Pizca de canela molida'],
+   pasos:['Mezcla el cottage con la piña en un bol.','Espolvorea canela al gusto. Sirve frío.'],
+   alts:[{nom:'Opción B',desc:'Yogur griego 150g + mango en dados',kcal:178},{nom:'Opción C',desc:'2 lonchas jamón serrano desgrasado + 1 palito queso',kcal:148}]},
+  {kcal:460,prot:34,hc:48,gra:12,tit:'Sopa de lentejas rojas con verduras',tiempo:'30 min',
+   ing:['80g lentejas rojas','1 zanahoria en dados','1 tallo apio','½ cebolla','1 tomate','600ml caldo vegetal','Comino, cúrcuma, AOVE'],
+   pasos:['Sofríe cebolla, zanahoria y apio en AOVE 5 min.','Añade las lentejas, tomate y caldo. Lleva a ebullición.','Cocina 20 min a fuego medio hasta que las lentejas estén tiernas.','Sazona con comino y cúrcuma. Sirve caliente.'],
+   alts:[{nom:'Opción B',desc:'120g merluza a la plancha + brócoli + ½ taza quinoa',kcal:440},{nom:'Opción C',desc:'Tortilla 2 huevos + espinacas + champiñones + ensalada verde',kcal:378}]},
+  {kcal:75,prot:0,hc:5,gra:0,tit:'Té de manzanilla nocturno',tiempo:'4 min',
+   ing:['1 bolsita manzanilla','Agua caliente'],
+   pasos:['Infusiona 5 min.','Toma caliente antes de acostarte.'],
+   alts:[{nom:'Opción B',desc:'Infusión de pasiflora + 2 onzas chocolate 85%',kcal:92},{nom:'Opción C',desc:'Leche caliente desnatada + canela + ½ cdta miel',kcal:82}]},
+]},
+
+sabado:{kcal:1800,prot:135,hc:168,gra:58,comidas:[
+  {kcal:385,prot:18,hc:44,gra:12,tit:'Panqueques de plátano y huevo con maní',tiempo:'10 min',
+   ing:['1 plátano maduro grande','2 huevos grandes','1 cda mantequilla de maní natural','Spray de aceite de coco','Canela molida al gusto'],
+   pasos:['Aplasta el plátano con un tenedor hasta obtener un puré fino.','Bate con los 2 huevos hasta integrar bien.','Cocina cucharadas en sartén antiadherente con spray, 2 min por lado a fuego medio.','Sirve con la mantequilla de maní y canela por encima.'],
+   alts:[{nom:'Opción B',desc:'Avena ½ taza + 1 huevo revuelto + 1 fruta mediana',kcal:358},{nom:'Opción C',desc:'2 tostadas integrales + 2 huevos cocidos + ½ aguacate',kcal:400}]},
+  {kcal:195,prot:3,hc:24,gra:9,tit:'Manzana con nueces',tiempo:'1 min',
+   ing:['1 manzana mediana','8 mitades de nueces'],
+   pasos:['Corta la manzana en gajos.','Come con las nueces. Mastica bien.'],
+   alts:[{nom:'Opción B',desc:'1 naranja mediana + 10 almendras',kcal:158},{nom:'Opción C',desc:'½ taza uva + 15 pistachos sin sal',kcal:178}]},
+  {kcal:520,prot:42,hc:48,gra:12,tit:'Ternera magra con brócoli y puré de patata ligero',tiempo:'25 min',
+   ing:['150g ternera magra (filete o lomo)','1 taza brócoli en florets','1 patata mediana 120g','100ml leche desnatada tibia','Sal, pimienta, ajo en polvo'],
+   pasos:['Cuece la patata en agua con sal 15 min. Escurre y haz un puré con leche desnatada.','Cuece el brócoli al vapor 6 min hasta tierno-crujiente.','Marca el filete de ternera 3-4 min por lado a fuego vivo. Salpimenta.','Sirve todo en el mismo plato.'],
+   alts:[{nom:'Opción B',desc:'150g pechuga pollo + boniato asado 100g + judías verdes',kcal:498},{nom:'Opción C',desc:'150g salmón plancha + ½ taza arroz integral + ensalada verde',kcal:508}]},
+  {kcal:168,prot:4,hc:16,gra:9,tit:'Sandía con queso fresco',tiempo:'2 min',
+   ing:['1 taza sandía en dados','50g queso fresco suave','Menta fresca (opcional)'],
+   pasos:['Combina la sandía con el queso en un bol pequeño.','Decora con hojas de menta fresca si tienes.'],
+   alts:[{nom:'Opción B',desc:'½ taza melón + 1 loncha fina jamón york',kcal:128},{nom:'Opción C',desc:'Yogur desnatado 150g + 1 kiwi',kcal:138}]},
+  {kcal:457,prot:36,hc:44,gra:12,tit:'Pescado a la plancha con arroz y ensalada',tiempo:'20 min',
+   ing:['120g dorada, lubina o merluza','½ taza arroz integral cocido','2 tazas ensalada mixta','½ tomate','1 cdta AOVE','Zumo de limón, perejil fresco'],
+   pasos:['Cuece el arroz.','Cocina el pescado 4 min por lado en sartén antiadherente bien caliente.','Prepara la ensalada y aliña con AOVE y limón.','Sirve el pescado sobre el arroz con la ensalada.'],
+   alts:[{nom:'Opción B',desc:'120g sepia a la plancha + ½ taza quinoa + espárragos',kcal:428},{nom:'Opción C',desc:'2 huevos a la plancha + ½ taza garbanzos + verduras salteadas',kcal:418}]},
+  {kcal:75,prot:2,hc:6,gra:5,tit:'Chocolate negro y té verde',tiempo:'4 min',
+   ing:['2 cuadrados chocolate negro 70%+','1 bolsita té verde'],
+   pasos:['Prepara el té verde con agua a 80°C (no hirviendo).','Toma el chocolate lentamente mientras bebes el té.'],
+   alts:[{nom:'Opción B',desc:'Infusión de jengibre + 5 almendras',kcal:68},{nom:'Opción C',desc:'1 vasito kéfir natural',kcal:62}]},
+]},
+
+domingo:{kcal:1600,prot:116,hc:150,gra:50,comidas:[
+  {kcal:352,prot:8,hc:58,gra:8,tit:'Avena con manzana, canela y miel',tiempo:'8 min',
+   ing:['½ taza copos de avena','1 manzana pequeña rallada o en cubos','1 cdta miel pura','½ cdta canela molida','200ml agua o leche desnatada'],
+   pasos:['Cuece la avena en agua o leche a fuego medio 5 min, removiendo.','Añade la manzana rallada o en cubos pequeños.','Sazona con canela y miel al gusto.'],
+   alts:[{nom:'Opción B',desc:'2 tostadas integrales + 2 cdas mantequilla de maní + plátano',kcal:360},{nom:'Opción C',desc:'Yogur griego 200g + granola artesana 30g + fresas',kcal:338}]},
+  {kcal:160,prot:5,hc:16,gra:8,tit:'Naranja con semillas de calabaza',tiempo:'1 min',
+   ing:['1 naranja mediana','2 cdas semillas de calabaza crudas'],
+   pasos:['Pela y separa la naranja en gajos.','Come junto a las semillas. Fuente de zinc y magnesio.'],
+   alts:[{nom:'Opción B',desc:'1 pera mediana + 8 almendras',kcal:148},{nom:'Opción C',desc:'½ taza uva + 1 palito queso bajo en grasa',kcal:128}]},
+  {kcal:480,prot:36,hc:50,gra:10,tit:'Pavo con ensalada completa y garbanzos',tiempo:'20 min',
+   ing:['150g pechuga de pavo','80g garbanzos cocidos (bote)','2 tazas lechuga mixta','1 tomate','½ pepino','½ pimiento rojo','1 cdta AOVE','Vinagre de manzana'],
+   pasos:['Cocina el pavo a la plancha 5 min por lado. Deja reposar 2 min.','Prepara la ensalada con todos los vegetales cortados.','Añade los garbanzos escurridos y el pavo laminado.','Aliña con AOVE y vinagre de manzana.'],
+   alts:[{nom:'Opción B',desc:'2 latas atún en agua + ½ taza lentejas + ensalada grande',kcal:448},{nom:'Opción C',desc:'Bowl quinoa 80g + edamame 80g + verduras encurtidas',kcal:458}]},
+  {kcal:168,prot:4,hc:22,gra:7,tit:'Pan integral con mantequilla de almendra',tiempo:'3 min',
+   ing:['1 rebanada pan integral','1.5 cdas mantequilla de almendra'],
+   pasos:['Tuesta ligeramente el pan.','Unta la mantequilla de almendra generosamente. Come despacio.'],
+   alts:[{nom:'Opción B',desc:'1 manzana mediana + 10 almendras',kcal:178},{nom:'Opción C',desc:'Requesón 100g + 1 cdta miel',kcal:128}]},
+  {kcal:370,prot:30,hc:36,gra:10,tit:'Sopa de pollo casera con verduras',tiempo:'35 min',
+   ing:['200g muslo de pollo sin piel','1 zanahoria','1 puerro','1 tallo apio','1 nabo pequeño','800ml caldo de pollo bajo en sodio','Sal, hoja de laurel, pimienta'],
+   pasos:['Lleva el caldo a ebullición con el laurel.','Añade el pollo limpio y cocina 20 min a fuego medio.','Retira el pollo, desmenuza y reserva.','Añade las verduras cortadas, cocina 10 min más. Reincorpora el pollo y sirve.'],
+   alts:[{nom:'Opción B',desc:'Crema de verduras casera (calabaza, zanahoria) + 1 huevo cocido',kcal:338},{nom:'Opción C',desc:'120g merluza al horno + brócoli + ½ taza arroz integral',kcal:378}]},
+  {kcal:70,prot:0,hc:6,gra:0,tit:'Infusión relajante de noche',tiempo:'5 min',
+   ing:['1 bolsita pasiflora o valeriana','Agua caliente a 90°C'],
+   pasos:['Infusiona 6-7 min tapado para conservar los principios activos.','Bebe caliente y tranquilamente 30 min antes de dormir.'],
+   alts:[{nom:'Opción B',desc:'Leche de almendras caliente + canela + 2 dátiles',kcal:110},{nom:'Opción C',desc:'Té de lavanda + 2 onzas chocolate negro 85%',kcal:92}]},
+]},
+};
+
+const SHOPPING=[
+  {cat:'🥩 Proteínas',items:['Pechuga de pollo (600g)','Pechuga de pavo (300g)','Ternera magra (300g)','Salmón fresco (400g)','Merluza o dorada (400g)','Atún en agua (3-4 latas)','Muslo de pollo sin piel (200g)','Huevos (18 ud)','Queso cottage bajo en grasa (200g)','Queso fresco bajo en sodio (200g)','Yogur griego natural 0% (4 × 150g)']},
+  {cat:'🥬 Verduras y hortalizas',items:['Espinacas baby (300g)','Brócoli (1 pieza)','Calabacín (2 unidades)','Coliflor (½ pieza)','Champiñones (250g)','Tomates maduros (6 unidades)','Pepino (2 unidades)','Pimiento rojo (2 unidades)','Zanahoria (4 unidades)','Apio (1 manojo)','Espárragos trigueros (1 manojo)','Puerro (1 unidad)','Lechuga mixta (1 bolsa 300g)','Ejotes/judías verdes (200g)','Cebolla (2 unidades)','Ajo (1 cabeza)','Aguacate (3 unidades)']},
+  {cat:'🍎 Frutas',items:['Manzana (4 unidades)','Plátano (6 unidades)','Kiwi (3 unidades)','Frutos rojos mixtos frescos o congelados (200g)','Naranja (3 unidades)','Pera (2 unidades)','Fresas frescas (200g)','Piña (½ fresca o lata sin azúcar)','Sandía (250g o porción prefilada)','Uvas (200g)']},
+  {cat:'🌾 Cereales e hidratos',items:['Copos de avena (500g)','Pan integral (1 molde o barra)','Arroz integral (500g)','Quinoa (250g)','Arroz salvaje (250g)','Tortillas integrales (6 unidades)','Patata (2 unidades)']},
+  {cat:'🫘 Legumbres',items:['Garbanzos cocidos en bote (2 botes)','Lentejas rojas secas (250g)','Lentejas cocidas en bote (1 bote)','Edamame congelado (200g)']},
+  {cat:'🥑 Grasas saludables',items:['AOVE – aceite de oliva virgen extra','Mantequilla de maní natural (1 bote)','Mantequilla de almendra (1 bote)','Almendras crudas sin sal (200g)','Nueces (150g)','Pistachos sin sal (100g)','Semillas de chía (100g)','Semillas de calabaza (100g)','Semillas de girasol (100g)']},
+  {cat:'🥛 Lácteos y alternativos',items:['Leche desnatada (1 litro)','Leche de almendras sin azúcar (1 litro)','Requesón (200g)','Kéfir natural (500ml)']},
+  {cat:'🧂 Despensa y otros',items:['Chocolate negro 70%+ (1 tableta)','Miel pura (1 bote pequeño)','Canela molida','Cúrcuma molida','Comino molido','Pimentón ahumado y dulce','Hummus (1 bote 200g)','Caldo de pollo bajo en sodio (1 brick)','Caldo vegetal (1 brick)','Infusiones: manzanilla, tilo, jengibre, valeriana, pasiflora']},
+];
+
+// ═══════════════════════════════════════════════════════
+// VIEW SWITCHING
+// ═══════════════════════════════════════════════════════
+let curView='plan';
+let selNutDay=selDay;
+let openMeals={};
+let shopChecked={};
+
+function showView(v){
+  curView=v;
+  document.getElementById('plan-view').style.display=v==='plan'?'':'none';
+  document.getElementById('nutri-view').style.display=v==='nutri'?'':'none';
+  document.getElementById('nav-plan').classList.toggle('active',v==='plan');
+  document.getElementById('nav-nutri').classList.toggle('active',v==='nutri');
+  if(v==='nutri'){selNutDay=selDay;renderNutri();}
+}
+
+function renderNutri(){
+  const dk=DAYS_KEY[selNutDay], day=NUT[dk];
+  const tabsHTML=DAYS_ABB.map((ab,i)=>{
+    const d2=NUT[DAYS_KEY[i]];
+    return `<div class="ndtab${i===selNutDay?' active':''}" onclick="selNutDay=${i};renderNutri()">
+      <div class="ndtab-ab">${ab}</div>
+      <div class="ndtab-kcal">${d2.kcal}</div>
+    </div>`;
+  }).join('');
+
+  const pMax=160,hMax=185,gMax=70;
+  const pPct=Math.min(100,Math.round(day.prot/pMax*100));
+  const hPct=Math.min(100,Math.round(day.hc/hMax*100));
+  const gPct=Math.min(100,Math.round(day.gra/gMax*100));
+  const isRest=dk==='miercoles'||dk==='domingo';
+
+  const mealsHTML=day.comidas.map((m,i)=>{
+    const slot=MEAL_SLOTS[i], key=dk+'_'+i, isOpen=openMeals[key]||false;
+    return `<div class="meal-card">
+      <div class="meal-card-hdr" onclick="toggleMeal('${key}')">
+        <div class="meal-card-ico">${slot.emoji}</div>
+        <div class="meal-card-info">
+          <div class="meal-card-name">${slot.nom} · ${m.tit}</div>
+          <div class="meal-card-meta">${slot.hora} · ⏱ ${m.tiempo}</div>
+        </div>
+        <div class="meal-card-kcal">${m.kcal} kcal</div>
+        <div class="meal-card-arrow${isOpen?' open':''}">▼</div>
+      </div>
+      <div class="meal-card-body${isOpen?' open':''}">
+        <div class="meal-card-inner">
+          <div class="meal-recipe-title">📝 ${m.tit}</div>
+          <div class="meal-ing-list">${m.ing.map(it=>`<div class="meal-ing-item">· ${it}</div>`).join('')}</div>
+          <div class="meal-steps">${m.pasos.map((p,pi)=>`<div class="meal-step"><div class="step-num">${pi+1}</div><div class="step-txt">${p}</div></div>`).join('')}</div>
+          <div class="meal-macro-row">
+            <div class="meal-macro-chip" style="background:#3B82F622;color:#3B82F6">💪 P ${m.prot}g</div>
+            <div class="meal-macro-chip" style="background:#F59E0B22;color:#F59E0B">⚡ HC ${m.hc}g</div>
+            <div class="meal-macro-chip" style="background:#F43F5E22;color:#F43F5E">🫒 G ${m.gra}g</div>
+          </div>
+          <div class="meal-alts-title">Alternativas</div>
+          ${m.alts.map(a=>`<div class="meal-alt">
+            <div class="meal-alt-nom">${a.nom}</div>
+            <div class="meal-alt-desc">${a.desc}</div>
+            <div class="meal-alt-kcal">${a.kcal} kcal</div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('nutri-content').innerHTML=`
+    <div class="nut-day-hdr">
+      <div class="nut-day-title">
+        <span>${PLAN[dk].emoji} ${PLAN[dk].nombre}</span>
+        <span style="font-size:14px;color:var(--acc)">${day.kcal} kcal</span>
+      </div>
+      <div class="nut-day-tabs">${tabsHTML}</div>
+    </div>
+
+    <div class="macro-summary">
+      <div class="macro-kcal">
+        <span class="macro-kcal-num">${day.kcal}</span>
+        <span class="macro-kcal-unit">kcal · ${isRest?'Día de descanso':'Día de entreno'}</span>
+      </div>
+      <div class="macro-bars">
+        <div class="macro-bar-row">
+          <div class="macro-bar-lbl">Proteína</div>
+          <div class="macro-bar-track"><div class="macro-bar-fill" style="width:${pPct}%;background:#3B82F6"></div></div>
+          <div class="macro-bar-val" style="color:#3B82F6">${day.prot}g</div>
+        </div>
+        <div class="macro-bar-row">
+          <div class="macro-bar-lbl">Hidratos</div>
+          <div class="macro-bar-track"><div class="macro-bar-fill" style="width:${hPct}%;background:#F59E0B"></div></div>
+          <div class="macro-bar-val" style="color:#F59E0B">${day.hc}g</div>
+        </div>
+        <div class="macro-bar-row">
+          <div class="macro-bar-lbl">Grasas</div>
+          <div class="macro-bar-track"><div class="macro-bar-fill" style="width:${gPct}%;background:#F43F5E"></div></div>
+          <div class="macro-bar-val" style="color:#F43F5E">${day.gra}g</div>
+        </div>
+      </div>
+      <div class="macro-chips">
+        <div class="macro-chip" style="background:#3B82F622;color:#3B82F6">💪 ${Math.round(day.prot*4/day.kcal*100)}% Proteína</div>
+        <div class="macro-chip" style="background:#F59E0B22;color:#F59E0B">⚡ ${Math.round(day.hc*4/day.kcal*100)}% HC</div>
+        <div class="macro-chip" style="background:#F43F5E22;color:#F43F5E">🫒 ${Math.round(day.gra*9/day.kcal*100)}% Grasa</div>
+      </div>
+    </div>
+
+    <div class="meal-cards">${mealsHTML}</div>
+    <button class="shop-open-btn" onclick="shopOpen()">🛒 Lista de la compra semanal</button>
+  `;
+}
+
+function toggleMeal(key){
+  openMeals[key]=!openMeals[key];
+  renderNutri();
+}
+
+function shopOpen(){
+  const modal=document.getElementById('shop-modal');
+  modal.style.display='flex';
+  document.body.style.overflow='hidden';
+  renderShop();
+}
+
+function shopClose(){
+  document.getElementById('shop-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+function toggleShopItem(key){
+  shopChecked[key]=!shopChecked[key];
+  renderShop();
+}
+
+function renderShop(){
+  const done=Object.values(shopChecked).filter(Boolean).length;
+  const total=SHOPPING.reduce((a,c)=>a+c.items.length,0);
+  document.getElementById('shop-body').innerHTML=
+    `<div style="margin-bottom:14px;font-size:12px;color:var(--tx2)">${done}/${total} artículos en el carro · Toca para marcar</div>`+
+    SHOPPING.map((cat,ci)=>`
+    <div class="shop-cat">
+      <div class="shop-cat-title">${cat.cat}</div>
+      ${cat.items.map((item,ii)=>{
+        const key=ci+'_'+ii, checked=shopChecked[key]||false;
+        return `<div class="shop-item${checked?' checked':''}" onclick="toggleShopItem('${key}')">
+          <div class="shop-check">${checked?'✓':''}</div>
+          <div class="shop-item-lbl">${item}</div>
+        </div>`;
+      }).join('')}
+    </div>`).join('');
 }
 
 // ═══════════════════════════════════════════════════════
